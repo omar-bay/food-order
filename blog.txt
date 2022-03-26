@@ -1,6 +1,9 @@
 npx create-next-app food-order
 yarn dev
 
+theme color
+#d1411e
+
 pages/insex.js
 delete everything inside the root div instead of <Head/>
 customize Head children

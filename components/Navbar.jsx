@@ -21,7 +21,7 @@ const Navbar = () => {
                     <li className={styles.listItem}>Home</li>
                     <li className={styles.listItem}>Products</li>
                     <li className={styles.listItem}>Menu</li>
-                    <Image src="/img/logo.png" alt="logo" width="100px" height="80px"/>
+                    <Image src="/img/logo.png" alt="logo" width="130px" height="104px"/>
                     <li className={styles.listItem}>Events</li>
                     <li className={styles.listItem}>Blog</li>
                     <li className={styles.listItem}>Contact</li>
@@ -32,8 +32,8 @@ const Navbar = () => {
             <div className={styles.item}>
                 <div className={styles.cart}>
                     <Image src="/img/cart.png" alt="logo" width="40px" height="40px"/>
+                    <div className={styles.counter}>2</div>
                 </div>
-                <div className={styles.counter}>2</div>
             </div>
 
         </div>
