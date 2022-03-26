@@ -1,0 +1,25 @@
+npx create-next-app food-order
+yarn dev
+
+pages/insex.js
+delete everything inside the root div instead of <Head/>
+customize Head children
+
+image folder in public folder
+
+/component/Layout to shortcut Navbar - page components - Footer
+
+delete everything in /styles/Home.module.css
+
+/pages/_app.js is the view
+wrap <Component {...pageProps}> inside the Layout
+Nav and Footer will appear in all pages now
+
+we don't need router to route pages
+go to /about
+
+styles should be in /styles
+example: /styles/Navbar.module.css
+
+/img/
+/ cz in public
