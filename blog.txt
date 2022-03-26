@@ -26,3 +26,18 @@ example: /styles/Navbar.module.css
 
 /img/
 / cz in public
+
+layout='fill' replaces doing width and height to Image
+then add objectFit="contain"
+
+100hv for full screen, but -100px cz Navbar
+300vw for full screen
+
+display flex did put them z each other
+
+get rid of horizontal scroll: in container css, overflow: hidden
+
+style={{ transform: `translateX(${-100*index}vw)` }}
+on the map wrapper. change images of the featured
+-100vw represents one screen
+transition: all 1.5s ease-in-out; is it's animation
