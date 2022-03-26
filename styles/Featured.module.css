@@ -3,6 +3,7 @@
     height: calc(100vh - 100px);
     background-color: #d1411e;
     overflow: hidden;
+    z-index: 2;
 }
 
 .arrowContainer {

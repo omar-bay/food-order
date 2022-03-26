@@ -41,3 +41,5 @@ style={{ transform: `translateX(${-100*index}vw)` }}
 on the map wrapper. change images of the featured
 -100vw represents one screen
 transition: all 1.5s ease-in-out; is it's animation
+
+i'm making the Featured z-index higher than the Navbar and that's looking so cool.
