@@ -44,7 +44,11 @@ transition: all 1.5s ease-in-out; is it's animation
 
 i'm making the Featured z-index higher than the Navbar and that's looking so cool.
 
-/Product/id=233215
+localhost:3000/Product/id=233215
 so we make a /pages/product/
 and ./[id].jsx
-here we do Product
+here we do Product Page
+
+position: relative; the image container
+the image wasn't obedient
+
