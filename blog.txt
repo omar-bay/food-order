@@ -4,7 +4,7 @@ yarn dev
 theme color
 #d1411e
 
-pages/insex.js
+pages/index.js
 delete everything inside the root div instead of <Head/>
 customize Head children
 
@@ -43,3 +43,8 @@ on the map wrapper. change images of the featured
 transition: all 1.5s ease-in-out; is it's animation
 
 i'm making the Featured z-index higher than the Navbar and that's looking so cool.
+
+/Product/id=233215
+so we make a /pages/product/
+and ./[id].jsx
+here we do Product
