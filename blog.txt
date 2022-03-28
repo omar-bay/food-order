@@ -53,3 +53,5 @@ position: relative; the image container
 the image wasn't obedient
 
 the htmlFor in the label tag refers to the checkbox id
+
+the Cart page will not use a sluck, so ne need to create a folder and [id].js
