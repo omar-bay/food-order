@@ -54,4 +54,6 @@ the image wasn't obedient
 
 the htmlFor in the label tag refers to the checkbox id
 
-the Cart page will not use a sluck, so ne need to create a folder and [id].js
+the Cart page will not use a sluck, so no need to create a folder and [id].js
+
+opacity is like brightness
