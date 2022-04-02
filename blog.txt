@@ -8,6 +8,12 @@ pages/index.js
 delete everything inside the root div instead of <Head/>
 customize Head children
 
+Pages
+/
+/product/2
+/orders/2
+/cart
+
 image folder in public folder
 
 /component/Layout to shortcut Navbar - page components - Footer
