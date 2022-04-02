@@ -71,3 +71,7 @@ it holds classNames that will be altered
 
 add a .env and MONGODB_URL
 the url is from the cluster connect
+
+we're creating a libraries (util) and doing mongoose stuff there
+
+we create our models. to create and read from documents(alt. tables)
