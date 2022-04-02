@@ -68,3 +68,6 @@ we will use common breakpoints to make the app responsive for the mobile view al
 @media screen and (max-width:480px) {}
 that was in the css of Navbar, Featured, PizzaCard, Footer, Product,...
 it holds classNames that will be altered
+
+add a .env and MONGODB_URL
+the url is from the cluster connect
