@@ -57,3 +57,8 @@ the htmlFor in the label tag refers to the checkbox id
 the Cart page will not use a sluck, so no need to create a folder and [id].js
 
 opacity is like brightness
+
+we will use common breakpoints to make the app responsive for the mobile view also
+@media screen and (max-width:480px) {}
+that was in the css of Navbar, Featured, PizzaCard, Footer, Product,...
+it holds classNames that will be altered
