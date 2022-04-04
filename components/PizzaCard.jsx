@@ -1,16 +1,15 @@
 import Image from 'next/image'
 import styles from '../styles/PizzaCard.module.css'
 
-const PizzaCard = () => {
+const PizzaCard = ({ pizza }) => {
     return (
         <div className={styles.container}>
             {/* Image */}
-            <Image src="/img/pizza.png" alt="" width="500" height="500"/>
-            <h1 className={styles.title}>Pepperoni Bue Bay</h1>
-            <span className={styles.price}>$19.90</span>
+            <Image src={pizza.img} alt="" width="500" height="500"/>
+            <h1 className={styles.title}>{pizza.title}</h1>
+            <span className={styles.price}>${pizza.prices[0]}</span>
             <p className={styles.desc}>
-                LauriPatterson was the first Finder, and we are his
-                descenders.
+                {pizza.desc}
             </p>
 
             {/* Description */}

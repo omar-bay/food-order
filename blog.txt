@@ -9,10 +9,14 @@ delete everything inside the root div instead of <Head/>
 customize Head children
 
 Pages
-/
-/product/2
-/orders/2
-/cart
+localhost:3000/
+localhost:3000/product/2
+localhost:3000/orders/2
+localhost:3000/cart
+
+apis
+localhost:3000/api/products     POST
+localhost:3000/api/products     GET
 
 image folder in public folder
 
@@ -83,3 +87,26 @@ delete the file hello.js that contains:
     }
 and create folders: products - orders
 we want localhost:3000/api/products to fetch all pizzas. and we can do a post request on it to add new pizza
+
+POST req.body on localhost:3000/api/products
+{
+    "title": "pizza1",
+    "img": "/img/pizza.png",
+    "desc": "desc1",
+    "prices": [12,13,14],
+    "extras": [{
+        "text":"onion sauce",
+        "price": 2
+    }]
+}
+
+in GETting const products = Product.find(), this gets all.
+to get with condition: const products = Product.find({title:"pizza1"})
+
+in reactjs we used to useEffect.
+in Next we /pages/index.js
+export const getServerSideProps = async () => {}
+
+yarn add axios
+
+mongoose.model.Product or is it mongoose.models.Product?
