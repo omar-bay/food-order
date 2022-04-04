@@ -75,3 +75,11 @@ the url is from the cluster connect
 we're creating a libraries (util) and doing mongoose stuff there
 
 we create our models. to create and read from documents(alt. tables)
+
+to use our models, we will go inside pages/api/
+delete the file hello.js that contains:
+    export default function handler(req, res) {
+    res.status(200).json({ name: 'John Doe' })
+    }
+and create folders: products - orders
+we want localhost:3000/api/products to fetch all pizzas. and we can do a post request on it to add new pizza
