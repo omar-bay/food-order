@@ -118,3 +118,9 @@ we put ({ pizza }) where the props should be because it's taking props from the 
 
 now, for the /product/${_id} to work, we will add a file in /pages/api/products [id].js
 PUT method to update the pizza
+
+create a new folder /redux
+yarn add @reduxjs/toolkit
+yarn add redux react-redux
+
+wrap the whole app with the redux provider in /pages/_app.js
