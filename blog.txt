@@ -110,3 +110,11 @@ export const getServerSideProps = async () => {}
 yarn add axios
 
 mongoose.model.Product or is it mongoose.models.Product?
+
+in /product/[id].js
+export const getServerSideProps = async ({params}) => {
+the params is the id in the link
+we put ({ pizza }) where the props should be because it's taking props from the fetched axios down
+
+now, for the /product/${_id} to work, we will add a file in /pages/api/products [id].js
+PUT method to update the pizza
