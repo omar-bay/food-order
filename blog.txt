@@ -127,4 +127,10 @@ wrap the whole app with the redux provider in /pages/_app.js
 
 useDispatch in the /pages/product/[id].jsx is for handling the add to cart
 
-1:02:00
+Navbar is cute in the component
+
+https://paypal.github.io/react-paypal-js/?path=/docs/example-paypalbuttons--default
+yarn add @paypal/react-paypal-js
+"disable-funding": "credit,card,venmo"
+in the provider options give your dev id where it says client-id
+developer.paypal.com/developer/applications
