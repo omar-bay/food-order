@@ -8,17 +8,33 @@ import {
     PayPalButtons,
     usePayPalScriptReducer
 } from "@paypal/react-paypal-js";
+import axios from 'axios';
+import { reset } from '../redux/cartSlice'
+import { useRouter } from 'next/router';
 
 
 const Cart = () => {
     const [open, setOpen] = useState(false)
+    const router = useRouter()
     // paypal stuff
-    const amount = "2";
+    // const amount = cart.total;
     const currency = "USD";
     const style = {"layout":"vertical"};
 
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)
+
+    const amount = cart.total;
+
+    const createOrder = async (data) => {
+        try {
+            const res = axios.post("http://localhost:3000/api/orders", data)
+            res.status === 201 && router.push("/orders/" + res.data._id)
+            dispatch(reset())
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     // Custom component to wrap the PayPalButtons and handle currency changes
     const ButtonWrapper = ({ currency, showSpinner }) => {
@@ -64,7 +80,14 @@ const Cart = () => {
                     onApprove={function (data, actions) {
                         return actions.order.capture().then(function (details) {
                             // Your code here after capture the order
-                            console.log(details)
+                            // console.log(details)         method is payment method, 1 for paypal
+                            const shipping = details.purchase_units[0].shipping
+                            createOrder({
+                                customer: shipping.name.full_name,
+                                address: shipping.address.address_line_1,
+                                total: cart.total,
+                                method: 1
+                            })
                         });
                     }}
                 />

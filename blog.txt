@@ -134,3 +134,7 @@ yarn add @paypal/react-paypal-js
 "disable-funding": "credit,card,venmo"
 in the provider options give your dev id where it says client-id
 developer.paypal.com/developer/applications
+
+create the orders api
+
+the router in useRouter will change the page if the request was successful
