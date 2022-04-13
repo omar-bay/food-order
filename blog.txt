@@ -138,3 +138,5 @@ developer.paypal.com/developer/applications
 create the orders api
 
 the router in useRouter will change the page if the request was successful
+
+the data given as props to some pages is fetched from getServerSideProps

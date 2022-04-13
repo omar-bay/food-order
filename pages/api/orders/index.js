@@ -14,7 +14,6 @@ const handler = async(req, res) => {
             res.status(500).json(error)
         }
     }
-
     if (method === "POST") {
         try {
             const order = await Order.create(req.body)
