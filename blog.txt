@@ -140,3 +140,11 @@ create the orders api
 the router in useRouter will change the page if the request was successful
 
 the data given as props to some pages is fetched from getServerSideProps
+
+Order props
+method:0    cash on delivery
+method:1    paypal
+
+cannont overide Order module once compiled:
+got to ./models/Orders.js
+instead of mongoose.model do mongoose.models

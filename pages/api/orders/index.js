@@ -19,7 +19,7 @@ const handler = async(req, res) => {
             const order = await Order.create(req.body)
             res.status(201).json(order)
         } catch (error) {
-            req.status(500).json(error)
+            res.status(500).json(error)
         }
     }
 }
