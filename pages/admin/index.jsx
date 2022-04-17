@@ -14,7 +14,19 @@ const admin = ({ orders, products }) => {
             const res = await axios.delete("http://localhost:3000/api/products/"+id)
             setPizzaList(pizzaList.filter(pizza => pizza._id !== id))
         } catch (error) {
-            
+            console.log(error)
+        }
+    }
+
+    const handleStatus = async (id) => {
+        const item = orderList.filter(order => order._id===id)[0]
+        const current_status = item.status
+
+        try {
+            const res = await axios.put("http://localhost:3000/api/orders/"+id, { status: current_status<2 ? current_status+1 : current_status })
+            setOrderList([res.data, ...orderList.filter(order => order._id !== id)])
+        } catch (error) {
+            console.log(error)
         }
     }
 
@@ -82,7 +94,7 @@ const admin = ({ orders, products }) => {
                                 <td>{order.method === 0 ? (<span>cash</span>) : (<span>paid</span>)}</td>
                                 <td>{status[order.status]}</td>
                                 <td>
-                                    <button>Next Stage</button>
+                                    <button onClick={()=>handleStatus(order._id)}>Next Stage</button>
                                 </td>
                             </tr>
                         </tbody>
