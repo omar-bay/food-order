@@ -13,6 +13,7 @@ localhost:3000/
 localhost:3000/product/2
 localhost:3000/orders/2
 localhost:3000/cart
+localhost:3000/admin
 
 apis
 localhost:3000/api/products     POST
@@ -148,3 +149,10 @@ method:1    paypal
 cannont overide Order module once compiled:
 got to ./models/Orders.js
 instead of mongoose.model do mongoose.models
+
+when admin/index.jsx no id needed to page
+localhost:3000/admin
+
+the delete will now delete from mongodb, but it will not appear in the page.
+so we will create a pizzaList state
+same goes with orders. we're putting stuff in state and deal there
