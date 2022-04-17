@@ -156,3 +156,6 @@ localhost:3000/admin
 the delete will now delete from mongodb, but it will not appear in the page.
 so we will create a pizzaList state
 same goes with orders. we're putting stuff in state and deal there
+
+if there's no admin cookies, the app should redirect to the home page
+yarn add cookie
