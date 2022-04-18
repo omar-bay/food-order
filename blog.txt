@@ -159,3 +159,9 @@ same goes with orders. we're putting stuff in state and deal there
 
 if there's no admin cookies, the app should redirect to the home page
 yarn add cookie
+
+because there should be only one admin user,
+we're adding to the ./.env file
+USERNAME
+PASSWORD
+TOKEN
