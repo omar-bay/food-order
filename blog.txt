@@ -177,3 +177,8 @@ if(myCookie.token !== process.env.TOKEN) {
         }
     }
 }
+
+onChange={(e) => setFile(e.target.files[0])}
+we can only choose one file
+
+when you use position absolute, the parent should be relative
