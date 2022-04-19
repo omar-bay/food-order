@@ -168,3 +168,12 @@ PASSWORD
 TOKEN
 
 restart app when changing in .env
+
+redirecting in nextjs
+if(myCookie.token !== process.env.TOKEN) {
+    return {
+        redirect: {
+            destination: "/admin/login"
+        }
+    }
+}
