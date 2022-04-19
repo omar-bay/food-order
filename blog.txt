@@ -14,6 +14,7 @@ localhost:3000/product/2
 localhost:3000/orders/2
 localhost:3000/cart
 localhost:3000/admin
+localhost:3000/admin/login
 
 apis
 localhost:3000/api/products     POST
@@ -165,3 +166,5 @@ we're adding to the ./.env file
 USERNAME
 PASSWORD
 TOKEN
+
+restart app when changing in .env
