@@ -4,8 +4,13 @@ import Image from 'next/image'
 import Featured from '../components/Featured'
 import PizzaList from '../components/PizzaList'
 import styles from '../styles/Home.module.css'
+import Add from '../components/Add'
+import { useState } from 'react'
+import AddButton from '../components/AddButton'
 
 export default function Home({ pizzaList, admin }) {
+  const [close, setClose] = useState(true)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,9 +21,11 @@ export default function Home({ pizzaList, admin }) {
 
       <Featured/>
 
-      {admin && <span>Hello</span>}
+      {admin && <AddButton setClose={setClose}/>}
 
       <PizzaList pizzaList={pizzaList}/>
+
+      {!close && <Add setClose={setClose}/>}
 
     </div>
   )
