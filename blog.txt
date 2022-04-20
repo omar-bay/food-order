@@ -182,3 +182,19 @@ onChange={(e) => setFile(e.target.files[0])}
 we can only choose one file
 
 when you use position absolute, the parent should be relative
+
+flex-wrap if more the it won't be horzontal anymore
+
+my cloudinary
+"https://api.cloudinary.com/v1_1/dbdepdq9d/image/upload"
+add upload preset from settings>upload>add upload preset
+make the file name same as that of upload_preset in data request
+choose unsigned
+
+we should allow the domain to show images from external on this nextjs app
+in ./next.config.js
+delete: reactStrictMode: true,
+instead:
+images: {
+    domains: ["res.cloudinary.com"]
+}

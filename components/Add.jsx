@@ -29,7 +29,29 @@ const Add = ({ setClose }) => {
     }
 
     const handleCreate = async () => {
-        
+        const data = new FormData();
+        data.append("file", file);
+        data.append("upload_preset", "uploads")
+        try {
+            const uploadRes = await axios.post(
+                "https://api.cloudinary.com/v1_1/dbdepdq9d/image/upload",
+                data
+            );
+
+            const { url } = uploadRes.data
+            const newProduct = {
+                title,
+                desc,
+                prices,
+                extraOptions,
+                img: url
+            }
+
+            await axios.post("http://localhost:3000/api/products", newProduct);
+            setClose(true)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     return (
@@ -65,24 +87,26 @@ const Add = ({ setClose }) => {
                 </div>
                 <div className={styles.item}>
                     <label className={styles.label}>Prices</label>
-                    <input
-                    className={`${styles.input} ${styles.inputSm}`}
-                    type="number"
-                    placeholder='Small'
-                    onChange={(e) => changePrice(e, 0)}
-                    />
-                    <input
-                    className={`${styles.input} ${styles.inputSm}`}
-                    type="number"
-                    placeholder='Medium'
-                    onChange={(e) => changePrice(e, 1)}
-                    />
-                    <input
-                    className={`${styles.input} ${styles.inputSm}`}
-                    type="number"
-                    placeholder='Large'
-                    onChange={(e) => changePrice(e, 2)}
-                    />
+                    <div className={styles.priceContainer}>
+                        <input
+                        className={`${styles.input} ${styles.inputSm}`}
+                        type="number"
+                        placeholder='Small'
+                        onChange={(e) => changePrice(e, 0)}
+                        />
+                        <input
+                        className={`${styles.input} ${styles.inputSm}`}
+                        type="number"
+                        placeholder='Medium'
+                        onChange={(e) => changePrice(e, 1)}
+                        />
+                        <input
+                        className={`${styles.input} ${styles.inputSm}`}
+                        type="number"
+                        placeholder='Large'
+                        onChange={(e) => changePrice(e, 2)}
+                        />
+                    </div>
                 </div>
                 <div className={styles.item}>
                     <label className={styles.label}>Extra</label>
